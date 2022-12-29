@@ -15,7 +15,6 @@ defineProps<{
       :skillItem="item"
     ></CardVue>
   </div>
-  <div>dier</div>
   <!-- <p>{{ skillData }}</p> -->
 </template>
 

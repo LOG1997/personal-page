@@ -1,7 +1,7 @@
 import request from "@/api/request";
-export function getSkill(params: object) {
+export function getResume(params: object) {
   return request({
-    url: "/home/getSkill",
+    url: "/about/getResume",
     method: "get",
     params,
   });

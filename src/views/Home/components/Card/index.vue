@@ -49,6 +49,8 @@ defineProps<{
   .card-title {
     width: 100%;
     height: 50px;
+    padding-left: 120px;
+    text-align: left;
     margin-top: -30px;
     .card-title__title {
       font-weight: 600;
@@ -60,7 +62,8 @@ defineProps<{
     }
   }
   .card-desc {
-    margin-left: 120px;
+    padding-left: 120px;
+    padding-right: 20px;
     text-align: left;
     font-size: 16px;
     color: #999;
