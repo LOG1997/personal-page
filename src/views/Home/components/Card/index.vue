@@ -40,10 +40,10 @@ defineProps<{
     width: 100%;
     height: 100px;
     position: absolute;
-    top: -70px;
+    top: -40px;
     svg {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
     }
   }
   .card-title {

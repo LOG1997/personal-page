@@ -11,7 +11,7 @@ import Footer from "./Footer/index.vue";
       <Header></Header>
     </header>
     <main class="main-container w-screen box-content min-h-[calc(100vh-10rem)]">
-      <router-view></router-view>
+      <router-view class="main-container-content"></router-view>
     </main>
     <footer class="footer-container w-screen">
       <Footer></Footer>
@@ -21,7 +21,11 @@ import Footer from "./Footer/index.vue";
 
 <style scoped lang="scss">
 .main-container {
-  min-width: 1200px;
+  // 居中
+  width: 100vw;
+  .main-container-content {
+    // 居中
+  }
 }
 .head-container {
   min-width: 1200px;
