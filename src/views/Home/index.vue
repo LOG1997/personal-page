@@ -7,7 +7,6 @@ import { ISkill } from "@/types/home";
 let skillData = reactive({ data: [] as ISkill[] });
 const getSkillData = async () => {
   getSkill({}).then((res) => {
-    console.log(res);
     skillData.data = res.data.data;
     console.log("😈skillData:", skillData);
   });

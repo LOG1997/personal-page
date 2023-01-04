@@ -1,0 +1,26 @@
+@import "../src/style/theme/index.scss";
+body {
+    @include themeify {
+        background-color: themed("theme-bg-color");
+        color: themed("font-color");
+    }
+}
+.head-container {
+    @include themeChildify {
+        $bg-color: themed("header-bg-color");
+        background-color: themed("header-bg-color");
+        box-shadow: 5px 5px 10px themed(shawdow-color), -5px -5px 10px #ebebeb;
+    }
+}
+.blue_box {
+    background-color: getThemeColor("blue_theme");
+}
+.purple_box {
+    background-color: getThemeColor("purple_theme");
+}
+.dark_box {
+    background-color: getThemeColor("dark_theme");
+}
+.default_box {
+    background-color: getThemeColor("default");
+}

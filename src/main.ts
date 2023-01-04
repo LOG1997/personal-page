@@ -1,5 +1,8 @@
 import { createApp } from "vue";
-import "./style.css";
+import "./style.scss";
+// import "@/css/index.scss";
+// import "@popperjs/core";
+// import "bootstrap";
 import "virtual:windi.css";
 import App from "./App.vue";
 

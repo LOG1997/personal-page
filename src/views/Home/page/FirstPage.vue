@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const switchTheme = () => {
+  console.log("switchTheme");
+};
+</script>
 
 <template>
   <div class="main-container flex">
@@ -12,7 +16,7 @@
         the interface should be straightforward, which helps the users to
         identify and frees them from memorizing and recalling.
       </p>
-      <div class="next-btn">查看项目👉</div>
+      <div class="next-btn" @click="switchTheme">查看项目👉</div>
     </div>
     <div class="img-background">
       <img src="@/assets/images/background.png" alt="" />

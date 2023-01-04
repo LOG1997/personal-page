@@ -23,9 +23,12 @@ const skip = (url: string) => {
     list-style: none;
     margin: 0px;
     display: flex;
+    height: 100%;
     li {
       padding: 0 20px;
+      // height: 100%;
       span {
+        line-height: 60px;
         cursor: pointer;
         font-size: 18px;
       }

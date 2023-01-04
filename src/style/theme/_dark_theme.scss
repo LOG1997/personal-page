@@ -1,0 +1,14 @@
+$theme-color: #1e1f25;
+$font-color: #fbfbfb;
+$light-color: #00e6f6;
+$normal-color: #183561;
+
+$dark_theme: (
+    theme-bg-color: $theme-color,
+    font-color: $font-color,
+    light-bg-color: $light-color,
+    normal-bg-color: $normal-color,
+    header-bg-color: lighten($theme-color, 10%),
+    shawdow-color: darken($theme-color, 5%),
+    border-color: lighten($theme-color, 20%),
+);

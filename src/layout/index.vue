@@ -5,13 +5,11 @@ import Footer from "./Footer/index.vue";
 
 <template>
   <div class="container w-screen">
-    <header
-      class="head-container h-16 w-screen flex justify-center items-center shadow-lg"
-    >
+    <header class="head-container">
       <Header></Header>
     </header>
     <main class="main-container w-screen box-content min-h-[calc(100vh-10rem)]">
-      <router-view class="main-container-content"></router-view>
+      <!-- <router-view class="main-container-content"></router-view> -->
     </main>
     <footer class="footer-container w-screen">
       <Footer></Footer>
@@ -22,15 +20,15 @@ import Footer from "./Footer/index.vue";
 <style scoped lang="scss">
 .main-container {
   // 居中
-  width: 100vw;
   .main-container-content {
     // 居中
   }
 }
 .head-container {
-  min-width: 1200px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 .footer-container {
-  min-width: 1200px;
 }
 </style>
