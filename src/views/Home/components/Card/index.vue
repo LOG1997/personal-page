@@ -22,6 +22,7 @@ defineProps<{
 <style scoped lang="scss">
 .card-item {
   width: 30%;
+  min-width: 350px;
   height: 200px;
   margin-bottom: 80px;
   position: relative;
@@ -31,8 +32,12 @@ defineProps<{
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
+  cursor: pointer;
+  @include themeChildify {
+    background-color: themed("header-bg-color");
+    box-shadow: 5px 5px 10px themed(shawdow-color);
+  }
   &:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
@@ -40,10 +45,10 @@ defineProps<{
     width: 100%;
     height: 100px;
     position: absolute;
-    top: -70px;
+    top: -40px;
     svg {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
     }
   }
   .card-title {

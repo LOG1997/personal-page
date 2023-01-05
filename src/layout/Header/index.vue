@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SwitchDark from "./components/SwitchDark/index.vue";
+import SwitchTheme from "./components/SwitchTheme/index.vue";
 import Nav from "./components/Nav/index.vue";
 </script>
 
@@ -12,23 +12,40 @@ import Nav from "./components/Nav/index.vue";
       <Nav></Nav>
     </div>
     <div class="header-info">
-      <SwitchDark></SwitchDark>
+      <SwitchTheme></SwitchTheme>
+      <!-- <el-dropdown :hide-on-click="true" @command="selectTheme">
+        <button class="w-20 h-10 rounded-3xl bg-blue-400">切换主题</button>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item command="default">default</el-dropdown-item>
+            <el-dropdown-item command="blue_theme">blue_theme</el-dropdown-item>
+            <el-dropdown-item command="dark_theme">dark_theme</el-dropdown-item>
+            <el-dropdown-item command="purple_theme"
+              >purple_theme</el-dropdown-item
+            >
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown> -->
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .header-container {
-  width: 80%;
-  height: 40px;
-  padding: 10px 0;
-  max-width: 1200px;
+  // background-color: $bg-color;
   display: flex;
-  justify-content: space-between;
-  place-items: center;
+  height: 60px;
+  vertical-align: middle;
+  min-width: 1200px;
   .header-logo {
+    flex: 1;
     display: flex;
-    place-items: center;
+    align-items: center;
+    .logo {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
   }
 }
 </style>
