@@ -1,16 +1,41 @@
-# Vue 3 + TypeScript + Vite
+<p align="center">
+  <a href="https://24years.top" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="https://raw.githubusercontent.com/LOG1997/vue3-personal-page/8914ba40f69972a3518f25e03d40c6767ccb1424/src/assets/images/ReadmeLogo.svg" alt="Vite logo">
+  </a>
+</p>
+<br/>
+<p align="center">
+<a href="https://github.com/LOG1997/vue3-personal-page">
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/log1997/vue3-personal-page?style=flat-square">
+</a>
+<a href="https://github.com/LOG1997/vue3-personal-page">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/log1997/vue3-personal-page?style=flat-square">
+</a>
+<a href="https://github.com/LOG1997/vue3-personal-page">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/static/v1?label=vue&message=3.2.37&color=brightgreen&style=flat-square">
+</a>
+<a href="https://cn.vitejs.dev/">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/static/v1?label=vite&message=3.1.0&color=blueviolet&style=flat-square">
+</a>
+</p>
+<br/>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Vue3 Personal Page个人主页 🦓
 
-## Recommended IDE Setup
+[项目网址](https://24years.top)
+> 使用vue3+ts+sass搭建
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+## 运行项目
+克隆项目到本地
+```
+git clone https://github.com/LOG1997/vue3-personal-page.git
+```
+安装依赖
+```
+cd vue3-personal-page
+npm i
+```
+运行项目
+```
+npm run dev
+```

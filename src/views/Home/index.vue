@@ -7,7 +7,6 @@ import { ISkill } from "@/types/home";
 let skillData = reactive({ data: [] as ISkill[] });
 const getSkillData = async () => {
   getSkill({}).then((res) => {
-    console.log(res);
     skillData.data = res.data.data;
     console.log("😈skillData:", skillData);
   });
@@ -29,11 +28,14 @@ onMounted(() => {
 .first-page {
   padding-top: 50px;
   width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
   height: calc(100vh - 60px);
 }
 .second-page {
-  width: 100vw;
+  max-width: 1200px;
   height: 100%;
+  margin: 0 auto;
 }
 // .logo {
 //   height: 6em;

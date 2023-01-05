@@ -1,0 +1,89 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  overflow-y: overlay;
+}
+
+body[data-theme=default] {
+  background-color: #fbfbfb;
+  color: #030303;
+}
+body[data-theme=blue_theme] {
+  background-color: #2e1f78;
+  color: #fbfbfb;
+}
+body[data-theme=dark_theme] {
+  background-color: #1e1f25;
+  color: #fbfbfb;
+}
+body[data-theme=purple_theme] {
+  background-color: #0a142e;
+  color: #ffffff;
+}
+
+[data-theme=default] .head-container {
+  background-color: white;
+  box-shadow: 5px 5px 10px #eeeeee, -5px -5px 10px #ebebeb;
+}
+[data-theme=blue_theme] .head-container {
+  background-color: #3e29a1;
+  box-shadow: 5px 5px 10px #261a64, -5px -5px 10px #ebebeb;
+}
+[data-theme=dark_theme] .head-container {
+  background-color: #353741;
+  box-shadow: 5px 5px 10px #131317, -5px -5px 10px #ebebeb;
+}
+[data-theme=purple_theme] .head-container {
+  background-color: #132658;
+  box-shadow: 5px 5px 10px #050b19, -5px -5px 10px #ebebeb;
+}
+
+.blue_box {
+  background-color: #2e1f78;
+}
+
+.purple_box {
+  background-color: #0a142e;
+}
+
+.dark_box {
+  background-color: #1e1f25;
+}
+
+.default_box {
+  background-color: #fbfbfb;
+}
+
+/* 优化滚动条 */
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  height: 10px;
+  width: 10px;
+  background: rgba(12, 9, 9, 0.1);
+  float: right;
+}
+
+::-webkit-scrollbar:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* .tables::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+  } */
+::-webkit-scrollbar-thumb {
+  /* 滚动条 */
+  background: #909399;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Webkit browsers */
+  /* Firefox */
+  -ms-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* IE9 */
+  -o-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* Opera(Old) */
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* IE9+, News */
+}/*# sourceMappingURL=style.css.map */
