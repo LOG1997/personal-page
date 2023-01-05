@@ -6,6 +6,7 @@ $normal-color: #183561;
 $dark_theme: (
     theme-bg-color: $theme-color,
     font-color: $font-color,
+    font-color-second: darken($font-color, 20%),
     light-bg-color: $light-color,
     normal-bg-color: $normal-color,
     header-bg-color: lighten($theme-color, 10%),

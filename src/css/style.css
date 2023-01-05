@@ -1,3 +1,9 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  overflow-y: overlay;
+}
+
 body[data-theme=default] {
   background-color: #fbfbfb;
   color: #030303;
@@ -46,4 +52,38 @@ body[data-theme=purple_theme] {
 
 .default_box {
   background-color: #fbfbfb;
+}
+
+/* 优化滚动条 */
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  height: 10px;
+  width: 10px;
+  background: rgba(12, 9, 9, 0.1);
+  float: right;
+}
+
+::-webkit-scrollbar:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* .tables::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+  } */
+::-webkit-scrollbar-thumb {
+  /* 滚动条 */
+  background: #909399;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Webkit browsers */
+  /* Firefox */
+  -ms-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* IE9 */
+  -o-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* Opera(Old) */
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* IE9+, News */
 }/*# sourceMappingURL=style.css.map */

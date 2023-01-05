@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import "./style.scss";
+// import "@/style/theme/index.scss";
 // import "@/css/index.scss";
 // import "@popperjs/core";
 // import "bootstrap";
@@ -10,8 +11,11 @@ const app = createApp(App);
 // 全局svg组件
 import "virtual:svg-icons-register";
 import svgIcon from "@/components/SvgIcon/index.vue";
+// tspark
+import Particles from "vue3-particles";
+app.use(Particles);
 // svg全局组件
-// 路由
+//app
 import router from "@/router";
 // pinia
 import { createPinia } from "pinia";
