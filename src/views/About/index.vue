@@ -50,7 +50,65 @@ onMounted(() => {
         <div class="resume-baseinfo-introduce">
           <p>{{ resumeData.introduce }}</p>
 
-          <div class="resume-baseinfo-contact"></div>
+          <div class="resume-baseinfo-contact">
+            <div class="resume-baseinfo-contact-item">
+              <div class="contact-item-title">
+                <svg-icon :name="'email'"></svg-icon>
+                <span>邮箱</span>
+              </div>
+              <p>{{ resumeData.email }}</p>
+            </div>
+            <div class="resume-baseinfo-contact-item">
+              <div class="contact-item-title">
+                <svg-icon :name="'phone'"></svg-icon>
+                <span>手机</span>
+              </div>
+              <p>{{ resumeData.phone }}</p>
+            </div>
+            <div class="resume-baseinfo-contact-item">
+              <div class="contact-item-title">
+                <svg-icon :name="'location'"></svg-icon>
+                <span>地址</span>
+              </div>
+              <p>{{ resumeData.address }}</p>
+            </div>
+            <div class="resume-baseinfo-contact-item">
+              <div class="contact-item-title">
+                <svg-icon :name="'website'"></svg-icon>
+                <span>个人网站</span>
+              </div>
+              <a :href="resumeData.website" target="_blank">
+                <p>{{ resumeData.website }}</p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-experience">
+      <div class="base-title">工作经历</div>
+      <div class="resume-experience-container">
+        <div
+          class="resume-experience-item"
+          v-for="item in resumeData.job_experience"
+          :key="item.company"
+        >
+          <div class="resume-experience-item-title">
+            <div class="resume-experience-item-title-left">
+              <div class="resume-experience-item-title-left-company">
+                <span>{{ item.company }}</span>
+              </div>
+              <div class="resume-experience-item-title-left-position">
+                <span>{{ item.position }}</span>
+              </div>
+            </div>
+            <div class="resume-experience-item-title-right">
+              <span>{{ item.time_slot }}</span>
+            </div>
+          </div>
+          <div class="resume-experience-item-desc">
+            <p>{{ item.job_desc }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -130,6 +188,10 @@ onMounted(() => {
         @include themeChildify {
           background-color: themed("header-bg-color");
           box-shadow: 5px 5px 10px themed(shawdow-color);
+          &:hover {
+            background-color: themed("header-bg-color-hover");
+            box-shadow: 5px 5px 10px themed(shawdow-color-hover);
+          }
         }
       }
     }
@@ -137,20 +199,17 @@ onMounted(() => {
   .resume-baseinfo {
     width: 100%;
     max-width: 1200px;
+    // height: 400px;
+    padding: 30px 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    .base-title {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 48px;
-      width: 30%;
-    }
+    border-bottom: 1px solid #6f7072;
     .resume-baseinfo-container {
       display: flex;
       justify-content: space-between;
       .resume-baseinfo-introduce {
-        p {
+        > p {
           font-size: 16px;
           font-weight: 400;
           line-height: 32px;
@@ -160,12 +219,115 @@ onMounted(() => {
         }
       }
       .resume-baseinfo-contact {
-        width: 30%;
+        cursor: default;
+        margin-top: 30px;
+        border-radius: 12px;
+        height: 150px;
+        // width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include themeChildify {
+          background-color: themed("important-bg-color");
+        }
+        align-items: center;
+        .resume-baseinfo-contact-item {
+          margin-left: 10px;
+          width: 20%;
+          height: 90%;
+          @include themeChildify {
+            color: themed("important-color");
+          }
+          .contact-item-title {
+            display: flex;
+            line-height: 50px;
+            align-items: center;
+            span {
+              margin-left: 10px;
+            }
+            @include themeChildify {
+              color: lighten(themed("important-color"), 10%);
+            }
+          }
+          p {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 32px;
+            // 超长隐藏
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          // background-color: #fccb90;
+        }
+      }
+    }
+  }
+  .resume-experience {
+    width: 100%;
+    max-width: 1200px;
+    // height: 400px;
+    padding: 30px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #6f7072;
+    .resume-experience-container {
+      width: 100%;
+      .resume-experience-item {
+        margin-bottom: 30px;
+        .resume-experience-item-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .resume-experience-item-title-left {
+            display: flex;
+            align-items: center;
+            .resume-experience-item-title-left-company {
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 32px;
+              margin-right: 20px;
+            }
+            .resume-experience-item-title-left-position {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 32px;
+              @include themeChildify {
+                color: themed("font-color-second");
+              }
+            }
+          }
+          .resume-experience-item-title-right {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            @include themeChildify {
+              color: themed("font-color-second");
+            }
+          }
+        }
+        .resume-experience-item-desc {
+          margin-top: 20px;
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            @include themeChildify {
+              color: themed("font-color-second");
+            }
+          }
+        }
       }
     }
   }
 }
 
+.base-title {
+  font-size: 24px;
+  font-weight: 600;
+  // line-height: 48px;
+  width: 30%;
+}
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
