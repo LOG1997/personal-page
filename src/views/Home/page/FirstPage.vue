@@ -5,10 +5,10 @@ const switchTheme = () => {
 </script>
 
 <template>
-  <div class="main-container flex">
+  <div class="main-container">
     <div class="main-title">
-      <p>IMAGINATIONS</p>
-      <p>Func</p>
+      <p class="main-title__title">IMAGINATIONS</p>
+      <p class="main-title__title">Func</p>
       <p class="desc">
         Simplify the process: keep operating process simple and
         intuitive.Definite and clear: enunciate your intentions clearly so that
@@ -28,23 +28,21 @@ const switchTheme = () => {
 .main-container {
   width: 100%;
   height: 100%;
+  display: flex;
   .main-title {
-    margin: auto 0;
     text-align: left;
-    width: 800px;
-    padding-left: 60px;
-    p {
-      font-family: Verdana, Genva, Arial, sans-serif;
-      font-size: 90px;
-      line-height: 100px;
+    margin-top: 10%;
+    max-width: 50%;
+    font-family: monospace, Cochin, Georgia, Times, "Times New Roman", serif;
+    .main-title__title {
+      font-size: 50px;
+      font-weight: 700;
     }
-
     .desc {
       font-size: 16px;
-      line-height: 20px;
-      text-align: left;
+      font-weight: 400;
+      margin-top: 20px;
       line-height: 30px;
-      padding: 20px 0;
     }
     .next-btn {
       width: 100px;
@@ -66,14 +64,13 @@ const switchTheme = () => {
     }
   }
   .img-background {
-    width: 80%;
-    height: 80%;
-    padding-left: 70px;
-    z-index: 10;
+    z-index: -1;
+    top: 0;
+    left: 50%;
     img {
-      z-index: 10;
-      width: 80%;
-      height: 90%;
+      position: absolute;
+      width: 600px;
+      height: 600px;
       object-fit: cover;
     }
   }

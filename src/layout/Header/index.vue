@@ -36,7 +36,7 @@ import Nav from "./components/Nav/index.vue";
   display: flex;
   height: 60px;
   vertical-align: middle;
-  width: 1200px;
+  min-width: 1200px;
   .header-logo {
     flex: 1;
     display: flex;

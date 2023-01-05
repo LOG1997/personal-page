@@ -29,7 +29,7 @@ onMounted(() => {
   padding-top: 50px;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   height: calc(100vh - 60px);
 }
 .second-page {
