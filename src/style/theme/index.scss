@@ -10,6 +10,7 @@ $themes: (
     dark_theme: $dark_theme,
     purple_theme: $purple_theme,
 );
+// 生成body的主题样式
 @mixin themeify {
     @each $themes-key, $themes-map in $themes {
         $themes-map: $themes-map !global;
@@ -18,15 +19,8 @@ $themes: (
         }
     }
 }
+// 生成子元素样式
 @mixin themeChildify {
-    @each $themes-key, $themes-map in $themes {
-        $themes-map: $themes-map !global;
-        [data-theme="#{$themes-key}"] & {
-            @content;
-        }
-    }
-}
-@mixin themeChildify2 {
     @each $themes-key, $themes-map in $themes {
         $themes-map: $themes-map !global;
         [data-theme="#{$themes-key}"] & {
