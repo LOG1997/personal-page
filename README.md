@@ -25,7 +25,7 @@
 [项目网址](https://24years.top)
 > 使用vue3+ts+sass搭建
 
-## 运行项目
+## 运行项目步骤
 克隆项目到本地
 ```
 git clone https://github.com/LOG1997/vue3-personal-page.git
