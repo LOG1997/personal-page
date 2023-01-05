@@ -1,4 +1,10 @@
-# Vue 3 + TypeScript + Vite
+<p align="center">
+  <a href="https://24years.top" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="https://github.com/LOG1997/vue3-personal-page/blob/feature-log/src/assets/images/background.png?raw=true" alt="Vite logo">
+  </a>
+</p>
+<br/>
+# Vue3 Personal Page个人主页
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
