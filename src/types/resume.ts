@@ -3,6 +3,8 @@ export interface iPersonResume {
   birthday: string;
   avatar: string;
   github: string;
+  address: string;
+  website: string;
   introduce: string;
   education: Education[];
   desc: string;
