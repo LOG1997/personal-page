@@ -3,7 +3,7 @@ import "./style.scss";
 // import "@/style/theme/index.scss";
 // import "@/css/index.scss";
 // import "@popperjs/core";
-// import "bootstrap";
+import "bootstrap";
 import "virtual:windi.css";
 import App from "./App.vue";
 

@@ -1,4 +1,5 @@
 @import "../src/style/theme/index.scss";
+@import "~bootstrap/scss/bootstrap.scss";
 body {
     margin: 0;
     overflow-y: overlay;
@@ -9,13 +10,20 @@ body {
         color: themed("font-color");
     }
 }
-.head-container {
+
+button {
     @include themeChildify {
-        $bg-color: themed("header-bg-color");
         background-color: themed("header-bg-color");
-        box-shadow: 5px 5px 10px themed(shawdow-color), -5px -5px 10px #ebebeb;
+        color: themed("font-color");
     }
 }
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+    @include themeChildify {
+        color: themed("font-color");
+    }
+}
+
 .blue_box {
     background-color: getThemeColor("blue_theme");
 }

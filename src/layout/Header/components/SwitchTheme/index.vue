@@ -41,6 +41,9 @@ onMounted(() => {
   </div>
 </template>
 <style scoped lang="scss">
+.switch-theme {
+  width: 100px;
+}
 .color_box {
   width: 16px;
   height: 16px;
