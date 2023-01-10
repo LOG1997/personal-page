@@ -12,7 +12,7 @@
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/log1997/vue3-personal-page?style=flat-square">
 </a>
 <a href="https://github.com/LOG1997/vue3-personal-page">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/static/v1?label=vue&message=3.2.37&color=brightgreen&style=flat-square">
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/log1997/vue3-personal-page/vue?filename=package.json&style=flat-square">
 </a>
 <a href="https://cn.vitejs.dev/">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/static/v1?label=vite&message=3.1.0&color=blueviolet&style=flat-square">

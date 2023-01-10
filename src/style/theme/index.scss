@@ -39,4 +39,12 @@ $themes: (
     } @else {
         @return $key;
     }
+}
+// 随机数颜色
+@function themedRandom($key) {
+    @if map-get($themes-map, $key) {
+        @return map-get($themes-map, $key);
+    } @else {
+        @return $key;
+    }
 } ;

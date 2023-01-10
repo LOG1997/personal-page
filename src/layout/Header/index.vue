@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { navList } from "./config";
 import SwitchTheme from "./components/SwitchTheme/index.vue";
-import Nav from "./components/Nav/index.vue";
+
+const skip = (url: string) => {
+  window.open(url, "_self");
+};
 </script>
 
 <template>
@@ -9,43 +13,95 @@ import Nav from "./components/Nav/index.vue";
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />
       </a>
-      <Nav></Nav>
     </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <svg-icon :name="'open'"></svg-icon>
+        </button>
+        <div
+          class="nav-list collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li
+              class="nav-item"
+              v-for="item in navList.data"
+              :key="item.id"
+              @click="skip(item.url)"
+            >
+              <a class="nav-link active" aria-current="page" href="#">{{
+                item.name
+              }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="header-info">
       <SwitchTheme></SwitchTheme>
-      <!-- <el-dropdown :hide-on-click="true" @command="selectTheme">
-        <button class="w-20 h-10 rounded-3xl bg-blue-400">切换主题</button>
-        <template #dropdown>
-          <el-dropdown-menu>
-            <el-dropdown-item command="default">default</el-dropdown-item>
-            <el-dropdown-item command="blue_theme">blue_theme</el-dropdown-item>
-            <el-dropdown-item command="dark_theme">dark_theme</el-dropdown-item>
-            <el-dropdown-item command="purple_theme"
-              >purple_theme</el-dropdown-item
-            >
-          </el-dropdown-menu>
-        </template>
-      </el-dropdown> -->
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .header-container {
-  // background-color: $bg-color;
+  // position: relative;
+  // width: 100vw;
+  max-width: 1200px;
   display: flex;
-  height: 60px;
+  justify-content: space-between;
   vertical-align: middle;
-  min-width: 1200px;
   .header-logo {
-    flex: 1;
+    padding-right: 30px;
+    // 居中
     display: flex;
+    justify-content: center;
     align-items: center;
     .logo {
-      width: 2rem;
-      height: 2rem;
-      margin-right: 1rem;
+      width: 40px;
+      height: 40px;
     }
+  }
+  @media screen and (max-width: 991px) {
+    .header-logo {
+      position: absolute;
+      // 居中
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .navbar {
+    width: 100%;
+    .nav-list {
+      ul li {
+        a {
+          @include themeChildify {
+            color: themed("font-color");
+          }
+          &:hover {
+            @include themeChildify {
+              color: themed("font-color-second");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-container {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
 </style>
