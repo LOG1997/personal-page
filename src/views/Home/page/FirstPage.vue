@@ -5,21 +5,23 @@ const switchTheme = () => {
 </script>
 
 <template>
-  <div class="main-container">
-    <div class="main-title">
-      <p class="main-title__title">IMAGINATIONS</p>
-      <p class="main-title__title">Func</p>
-      <p class="desc">
-        Simplify the process: keep operating process simple and
-        intuitive.Definite and clear: enunciate your intentions clearly so that
-        the users can quickly understand and make decisions.Easy to identify:
-        the interface should be straightforward, which helps the users to
-        identify and frees them from memorizing and recalling.
-      </p>
-      <div class="next-btn" @click="switchTheme">查看项目👉</div>
-    </div>
-    <div class="img-background">
-      <img src="@/assets/images/background.png" alt="" />
+  <div class="main-container container">
+    <div class="row">
+      <div class="main-title col-auto me-auto">
+        <p class="main-title__title">IMAGINATIONS</p>
+        <p class="main-title__title">Func</p>
+        <p class="desc">
+          Simplify the process: keep operating process simple and
+          intuitive.Definite and clear: enunciate your intentions clearly so
+          that the users can quickly understand and make decisions.Easy to
+          identify: the interface should be straightforward, which helps the
+          users to identify and frees them from memorizing and recalling.
+        </p>
+        <div class="next-btn" @click="switchTheme">查看项目👉</div>
+      </div>
+      <div class="img-background col-auto">
+        <img src="@/assets/images/background.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -28,7 +30,7 @@ const switchTheme = () => {
 .main-container {
   width: 100%;
   height: 100%;
-  display: flex;
+  // display: flex;
   .main-title {
     text-align: left;
     margin-top: 10%;
@@ -64,15 +66,42 @@ const switchTheme = () => {
     }
   }
   .img-background {
-    z-index: -1;
-    top: 0;
-    left: 50%;
     img {
-      position: absolute;
-      width: 600px;
-      height: 600px;
+      width: 500px;
+      height: 500px;
+      min-width: 50%;
+      // min-height: 500px;
+      // width: 50%;
+
+      // height: 550px;
       object-fit: cover;
     }
   }
+}
+@media (max-width: 1200px) {
+  .main-container {
+    .main-title {
+      max-width: 60%;
+      margin: 10% auto;
+    }
+    .img-background {
+      position: absolute;
+      // 居中
+      // top: 50%;
+      left: 15%;
+      z-index: -1;
+      filter: blur(4px);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+p {
+  // 允许换行
+
+  word-break: break-all;
 }
 </style>

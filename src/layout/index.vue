@@ -4,7 +4,7 @@ import Footer from "./Footer/index.vue";
 </script>
 
 <template>
-  <div class="container w-screen">
+  <div class="w-screen">
     <header class="head-container">
       <Header></Header>
     </header>
@@ -20,16 +20,20 @@ import Footer from "./Footer/index.vue";
 <style scoped lang="scss">
 .main-container {
   // 居中
-  background-color: transparent;
+  // background-color: transparent;
   .main-container-content {
     // 居中
   }
 }
 .head-container {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  @include themeChildify {
+    background-color: themed("header-bg-color");
+    box-shadow: 5px 5px 10px themed(shawdow-color),
+      -5px -5px 10px themed(shawdow-color);
+  }
 }
+
 .footer-container {
 }
 </style>

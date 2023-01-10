@@ -29,6 +29,7 @@ interface JobExperience {
   job_desc: string;
   position: string;
   time_slot: string;
+  companyPic?: string;
 }
 
 /**

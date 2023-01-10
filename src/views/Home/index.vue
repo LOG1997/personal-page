@@ -17,11 +17,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <FirstPageVue class="first-page"></FirstPageVue>
-  <SecondPageVue
-    class="second-page"
-    :skillData="skillData.data"
-  ></SecondPageVue>
+  <div class="container">
+    <FirstPageVue class="first-page"></FirstPageVue>
+    <SecondPageVue
+      class="second-page"
+      :skillData="skillData.data"
+    ></SecondPageVue>
+  </div>
 </template>
 
 <style scoped lang="scss">
