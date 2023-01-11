@@ -5,27 +5,26 @@ import { iProjectlist } from "@/types/projectList";
 import CardProject from "./components/CardProject.vue";
 import ProjectType from "./components/ProjectType.vue";
 import PersonCard from "./components/PersonCard.vue";
-
+// import { useTime } from "@/hooks/useTime";
 import { debounce } from "lodash";
-
 const ProjectList = ref<iProjectlist[]>([]);
 const project = ref<iProjectlist>({} as iProjectlist);
+// const { setProjectIndex, projectIndex } = useTime(1000, ProjectList);
 
 const getProjectListData = async () => {
   getProjectList({}).then((res) => {
-    console.log(res);
     ProjectList.value = res.data;
     project.value = res.data[0];
   });
 };
 const handleMouseOver = (cardData: iProjectlist) => {
   debounce(() => {
-    // console.log("mouse over", Date());
     project.value = cardData;
   }, 1000)();
 };
 onMounted(async () => {
   getProjectListData();
+  // setProjectIndex();
 });
 </script>
 
@@ -51,11 +50,11 @@ onMounted(async () => {
       </div>
     </div>
     <div class="project_desc container">
-      <p>描述</p>
+      <p class="border-bottom py-3">描述</p>
       <p class="project_desc-content">{{ project.projectDesc }}</p>
     </div>
     <div class="project_dev container">
-      <p>开发参与者</p>
+      <p class="border-bottom py-3">开发参与者</p>
       <PersonCard :person_info="project.developers"></PersonCard>
     </div>
   </div>

@@ -17,9 +17,7 @@ watch(
 );
 const typeList = ref<string[]>([]);
 const handleVersion = (projectTypes: string) => {
-  console.log("projectTypes:", projectTypes);
   typeList.value = projectTypes.split(",");
-  console.log("😄typeList:", typeList);
 };
 onMounted(() => handleVersion(props.projectTypes));
 </script>

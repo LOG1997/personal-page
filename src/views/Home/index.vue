@@ -8,7 +8,6 @@ let skillData = reactive({ data: [] as ISkill[] });
 const getSkillData = async () => {
   getSkill({}).then((res) => {
     skillData.data = res.data.data;
-    console.log("😈skillData:", skillData);
   });
 };
 onMounted(() => {

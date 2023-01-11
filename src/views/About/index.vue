@@ -9,7 +9,6 @@ let resumeData = ref({} as iPersonResume);
 const getResumeData = () => {
   getResume({}).then((res) => {
     resumeData.value = res.data;
-    console.log(resumeData.value);
   });
 };
 onMounted(() => {
