@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getToken } from "@/utils/auth";
-axios.defaults.baseURL = "/api";
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 //设置超时
 axios.defaults.timeout = 3000;

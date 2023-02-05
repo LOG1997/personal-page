@@ -8,7 +8,6 @@ let skillData = reactive({ data: [] as ISkill[] });
 const getSkillData = async () => {
   getSkill({}).then((res) => {
     skillData.data = res.data.data;
-    console.log("😈skillData:", skillData);
   });
 };
 onMounted(() => {
@@ -17,11 +16,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <FirstPageVue class="first-page"></FirstPageVue>
-  <SecondPageVue
-    class="second-page"
-    :skillData="skillData.data"
-  ></SecondPageVue>
+  <div class="container">
+    <FirstPageVue class="first-page"></FirstPageVue>
+    <SecondPageVue
+      class="second-page"
+      :skillData="skillData.data"
+    ></SecondPageVue>
+  </div>
 </template>
 
 <style scoped lang="scss">
