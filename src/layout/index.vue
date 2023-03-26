@@ -23,6 +23,8 @@ import Footer from "./Footer/index.vue";
   }
 }
 .head-container {
+  position: fixed;
+  z-index: 1000;
   width: 100%;
   @include themeChildify {
     background-color: themed("header-bg-color");

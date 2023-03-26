@@ -1,107 +1,63 @@
 <script setup lang="ts">
-const switchTheme = () => {
-  console.log("switchTheme");
-};
+import SvgIcon from "@/components/SvgIcon/index.vue";
 </script>
 
 <template>
-  <div class="main-container container">
-    <div class="row">
-      <div class="main-title col-auto me-auto">
-        <p class="main-title__title">IMAGINATIONS</p>
-        <p class="main-title__title">Func</p>
-        <p class="desc">
-          Simplify the process: keep operating process simple and
-          intuitive.Definite and clear: enunciate your intentions clearly so
-          that the users can quickly understand and make decisions.Easy to
-          identify: the interface should be straightforward, which helps the
-          users to identify and frees them from memorizing and recalling.
-        </p>
-        <div class="next-btn" @click="switchTheme">查看项目👉</div>
+  <div class="main-container w-500px mx-auto">
+    <div class="main-text w-500px mx-auto">
+      <h3 class="main-text-h3 text-48px mb-6">Hey!It's Zhangwenlei</h3>
+      <h2 class="main-text-h2 text-64px font-bold mb-10">Call me Log</h2>
+      <p class="main-text-desc text-36px mb-6">
+        a front-end <span class="text-gray-500">programmer</span>
+      </p>
+    </div>
+    <div class="link-group flex gap-2 w-500px mx-auto">
+      <div class="github-link">
+        <a href="https://github.com/LOG1997" target="_blank">
+          <SvgIcon name="github"
+        /></a>
       </div>
-      <div class="img-background col-auto">
-        <img src="@/assets/images/background.png" alt="" />
+      <div class="instagram-link">
+        <a href="https://www.instagram.com/log.z1997/" target="_blank">
+          <SvgIcon name="instagram"
+        /></a>
       </div>
+    </div>
+    <div class="button-container w-500px mx-auto">
+      <button
+        class="button w-30 h-10 mt-6 text-center leading-8 rounded-lg cursor-pointer"
+      >
+        Blog
+      </button>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.main-container {
-  width: 100%;
-  height: 100%;
-  // display: flex;
-  .main-title {
-    text-align: left;
-    margin-top: 10%;
-    max-width: 50%;
-    font-family: monospace, Cochin, Georgia, Times, "Times New Roman", serif;
-    .main-title__title {
-      font-size: 50px;
-      font-weight: 700;
-    }
-    .desc {
-      font-size: 16px;
-      font-weight: 400;
-      margin-top: 20px;
-      line-height: 30px;
-    }
-    .next-btn {
-      width: 100px;
-      height: 40px;
-      // 渐变
-      background: linear-gradient(90deg, #646cff 0%, #42b883 100%);
-      color: #fff;
-      border-radius: 10px;
-      text-align: center;
-      line-height: 40px;
-      margin-top: 20px;
-      cursor: pointer;
-      // 渐变阴影
-      box-shadow: 0 0 2em #646cffaa;
-      &:hover {
-        background-color: #646cffaa;
-        box-shadow: 0 0 2em #646cff;
-      }
-    }
-  }
-  .img-background {
-    img {
-      width: 500px;
-      height: 500px;
-      min-width: 50%;
-      // min-height: 500px;
-      // width: 50%;
-
-      // height: 550px;
-      object-fit: cover;
-    }
+.github-link {
+  &:hover {
+    color: #797979;
   }
 }
-@media (max-width: 1200px) {
-  .main-container {
-    .main-title {
-      max-width: 60%;
-      margin: 10% auto;
-    }
-    .img-background {
-      position: absolute;
-      // 居中
-      // top: 50%;
-      left: 15%;
-      z-index: -1;
-      filter: blur(4px);
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
+.instagram-link {
+  &:hover {
+    color: #bc1e99;
   }
 }
-p {
-  // 允许换行
-
-  word-break: break-all;
+.button {
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  &:hover {
+    background-image: linear-gradient(
+      45deg,
+      #fad0c4 0%,
+      #ff9a9e 99%,
+      #ff9a9e 100%
+    );
+  }
 }
 </style>

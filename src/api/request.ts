@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getToken } from "@/utils/auth";
+import { getToken } from "@/types/utils/auth";
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 //设置超时

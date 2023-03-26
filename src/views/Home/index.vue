@@ -27,10 +27,10 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .first-page {
-  padding-top: 50px;
+  padding-top: 90px;
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto;
+  // margin: 20px auto;
   height: calc(100vh - 60px);
 }
 .second-page {

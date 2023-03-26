@@ -12,6 +12,11 @@ export const navList = {
     },
     {
       id: 2,
+      name: "博客",
+      url: "blog",
+    },
+    {
+      id: 3,
       name: "关于",
       url: "about",
     },
