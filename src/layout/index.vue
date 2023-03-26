@@ -19,10 +19,7 @@ import Footer from "./Footer/index.vue";
 
 <style scoped lang="scss">
 .main-container {
-  // 居中
-  // background-color: transparent;
   .main-container-content {
-    // 居中
   }
 }
 .head-container {
